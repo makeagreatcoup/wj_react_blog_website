@@ -11,6 +11,8 @@
   --background-end-rgb: 255, 255, 255; */
   --bg: white;
   --textColor: black;
+  --softBg: #f0f0f0;
+  --softTextColor: #626262;
 }
 
 
@@ -50,6 +52,13 @@
   color: var(--textColor);
 }
 
+.softBg{
+  background-color: var(--softBg);
+}
+
+.softTextColor{
+  color: var(--softTextColor)
+}
 
 @media (prefers-color-scheme: dark) {
   :root {

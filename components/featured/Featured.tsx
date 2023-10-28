@@ -7,15 +7,15 @@ const Featured = () => {
       <h1 className="lg:text-[80px] md:text-[60px] text-[40px] font-[300]">
         <b>Hey, lama dev here!</b> Discover my stories and creative ideas.
       </h1>
-      <div className="mt-16 items-center gap-12 block lg:flex">
+      <div className="mt-16 items-center gap-12 block md:flex">
         <div className=" flex-1 h-[500px] relative">
           <Image src="/p1.jpeg" alt="" fill className="object-cover" />
         </div>
-        <div className="flex-1 mt-16 lg:mt-0 flex flex-col gap-5">
+        <div className="flex-1 mt-16 md:mt-0 flex flex-col gap-5">
           <h1 className="text-[32px]">
             Lorem ipsum dolor sit amet alim consectetur adipisicing elit
           </h1>
-          <p className="text-[16px]">
+          <p className="text-[16px] softTextColor">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Cupiditate, quam nisi magni ea laborum inventore voluptatum
             laudantium repellat ducimus unde aspernatur fuga. Quo, accusantium

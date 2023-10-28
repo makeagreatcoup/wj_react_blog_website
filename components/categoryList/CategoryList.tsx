@@ -16,7 +16,7 @@ const CategoryList = () => {
 
   return (
     <div className='mt-8'>
-      <h1 >热门分类</h1>
+      <h1 className='text-lg font-bold'>热门分类</h1>
       <div className='flex flex-wrap justify-between gap-5'>
         {data?.map(item=>(
           <Link className='mt-4 px-5 h-16 w-max flex items-center justify-center rounded-lg bg-slate-700' href="/blog?category=" key={item.id}>

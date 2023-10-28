@@ -11,8 +11,8 @@ export default function Home({searchParams}:{searchParams:{page:string}}) {
     <main className="">
      <Featured />
      <CategoryList />
-     <div className="flex gap-2">
-      <CardList />
+     <div className="block lg:flex gap-2">
+      <CardList page={0} />
       <Menu />
      </div>
     </main>
