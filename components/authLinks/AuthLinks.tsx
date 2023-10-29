@@ -21,7 +21,7 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <div className=" bgColor absolute top-20 left-0 w-full flex flex-col items-center justify-center gap-16 z-auto h-[calc(100%-100px)]">
+        <div className=" bgColor  top-20 left-0 w-full flex flex-col items-center justify-center gap-16 z-999 h-full fixed">
           <Link href="/">首页</Link>
           <Link href="/">关于</Link>
           <Link href="/">项目</Link>

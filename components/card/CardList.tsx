@@ -23,7 +23,7 @@ const CardList = ({page}:{page:number}) => {
       <h1 className='text-lg font-bold'>近期博客</h1>
       <div>
         {posts.map(item=>(
-          <Card item={item} key={item.id}/>
+          <Card item={item} key={item.id} itemKey={item.id}/>
         ))}
       </div>
       <Pagination page={page} hasPrev={hasPrev} hasNext={hasNext} />

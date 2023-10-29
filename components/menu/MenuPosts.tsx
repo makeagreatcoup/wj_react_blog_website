@@ -45,15 +45,19 @@ const MenuPosts = ({ withImage }: { withImage: boolean }) => {
   return (
     <div className="flex flex-col mt-4">
       {items?.map((item) => (
-        <Link href="/" className="flex gap-2 items-center mt-4">
+        <Link href="/" className="flex gap-2 items-center mt-4" key={item.id}>
           {withImage && (
-            <div className="flex-1 relative aspect-square">
-              <Image
-                src={item.url}
-                alt=""
-                fill
-                className=" object-cover rounded-full"
-              />
+            <div className="flex-1  aspect-square">
+              <div className=" rounded-full w-full h-full overflow-clip">
+                <Image
+                  src={item.url}
+                  alt=""
+                  width={1000}
+                  height={1000}
+                  className=" object-cover rounded-full"
+                />
+              </div>
+
             </div>
           )}
           <div className="flex-[4_1] flex flex-col gap-1">

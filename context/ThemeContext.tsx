@@ -16,8 +16,12 @@ const defaultTheme = themes[0];
 export const ThemeContext = createContext({theme: defaultTheme.name, switchTheme: (str:string) => {}});
 
 const getFromLocalStorage = () => {
-    const value = localStorage.getItem("theme") as string;
-    return value || defaultTheme.name;
+  let value
+  if (typeof window !== "undefined") {
+    value = localStorage.getItem("theme") as string;
+  }
+  return value || defaultTheme.name;
+
 };
 
 export const ThemeContextProvider = ({ children }: {

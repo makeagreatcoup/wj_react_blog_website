@@ -4,16 +4,15 @@ import React from 'react'
 const CategoryList = () => {
 
   const data = [
-    { id: 1, name: 'React' }
-    , { id: 2, name: 'Vue' }
-    , { id: 3, name: 'Angular' }
-    , { id: 4, name: 'Node' }
-    , { id: 5, name: 'MongoDB' }
-    , { id: 6, name: 'MySQL' }
-    , { id: 7, name: 'Redis' }
-    , { id: 8, name: 'PostgreSQL' }
-    , { id: 9, name: 'MongoDB' }]
-
+    { id: '1', name: 'React' }
+    , { id: '2', name: 'Vue' }
+    , { id: '3', name: 'Angular' }
+    , { id: '4', name: 'Node' }
+    , { id: '5', name: 'MongoDB' }
+    , { id: '6', name: 'MySQL' }
+    , { id: '7', name: 'Redis' }
+    , { id: '8', name: 'PostgreSQL' }
+    , { id: '9', name: 'MongoDB' }]
   return (
     <div className='mt-8'>
       <h1 className='text-lg font-bold'>热门分类</h1>
