@@ -9,8 +9,8 @@ const Featured = () => {
         <b>Hey, lama dev here!</b> Discover my stories and creative ideas.
       </h1>
       <div className="mt-16 items-center gap-12 block md:flex">
-        <div className=" flex-1 h-[500px] overflow-clip">
-          <ThemeImage srcDark="/fashion.png" srcLight="/food.png" alt="" width={1000} height={1000} className=" " />
+        <div className=" flex-1 h-[500px] relative">
+          <ThemeImage srcDark="/fashion.png" srcLight="/food.png" alt="" fill className=" object-cover" />
         </div>
         <div className="flex-1 mt-16 md:mt-0 flex flex-col gap-5">
           <h1 className="text-[32px]">

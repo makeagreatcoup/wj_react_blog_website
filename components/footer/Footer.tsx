@@ -21,7 +21,7 @@ const Footer = () => {
           <Image src="/next.svg" alt="" width={30} height={30} />
         </div>
       </div>
-      <div className="flex flex-1 w-full justify-center md:justify-end gap-10">
+      <div className="flex flex-1 w-full justify-center md:justify-end gap-20">
         <div className="flex flex-col gap-1 font-light">
           <span className=" font-bold">链接</span>
           <Link href="/">主页</Link>

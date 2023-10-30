@@ -6,8 +6,8 @@ const Card = ({ item, itemKey }: { item: any; itemKey: string }) => {
   return (
     <div key={itemKey} className="my-5 block md:flex items-center gap-4">
       {item.url && (
-        <div className="h-52  flex-1 overflow-hidden">
-          <Image src={item.url} alt="" width={1000} height={1000} />
+        <div className="h-52  flex-1 relative">
+          <Image src={item.url} alt="" fill className=" object-cover" />
         </div>
       )}
       <div className="flex-1 block md:flex flex-col gap-1">

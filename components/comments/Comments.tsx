@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Navbar = () => {
+const Comments = ({postId}:{postId:string}) => {
   return (
-    <div>Navbar</div>
+    <div>Comments</div>
   )
 }
 
-export default Navbar
+export default Comments
