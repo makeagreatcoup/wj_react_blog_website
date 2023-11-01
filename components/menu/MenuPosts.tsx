@@ -43,9 +43,9 @@ const MenuPosts = ({ withImage }: { withImage: boolean }) => {
   ];
 
   return (
-    <div className="flex flex-col mt-4">
+    <div className="flex flex-col mt-4 max-w-max min-w-[200px]">
       {items?.map((item) => (
-        <Link href="/" className="flex gap-5 items-center mt-4 w-max" key={item.id}>
+        <Link href="/" className="flex gap-5 items-center mt-4" key={item.id}>
           {withImage && (
             <div className="flex-1 relative  aspect-square">
                 <Image

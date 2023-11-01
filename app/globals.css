@@ -56,6 +56,10 @@
   background-color: var(--softBg);
 }
 
+.darkBg{
+  background-color: #1f273a
+}
+
 .softTextColor{
   color: var(--softTextColor)
 }

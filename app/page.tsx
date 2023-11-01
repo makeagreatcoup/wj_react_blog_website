@@ -12,7 +12,7 @@ export default function Home({searchParams}:{searchParams:{page:string}}) {
      <Featured />
      <CategoryList />
      <div className="block lg:flex gap-2">
-      <CardList page={0} />
+      <CardList page={page} />
       <Menu />
      </div>
     </main>
