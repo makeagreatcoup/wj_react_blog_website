@@ -1,5 +1,6 @@
 "use client";
 
+// import { UserButton, useAuth } from "@clerk/nextjs";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -8,10 +9,10 @@ const Navbar = () => {
   const { status } = useSession();
 
   const [open, setOpen] = useState(false);
-
   return (
     <>
-      {status === "unauthenticated" ? <Link href={""} onClick={()=>signOut()}>登出</Link> : <Link href={""} onClick={()=>signIn()}>登录</Link>}
+      {/* {isSignedIn ? <UserButton afterSignOutUrl="/" />  : <Link href="/api/sign-in/" >登录</Link>} */}
+      {status === "authenticated" ? <Link href={""} onClick={()=>signOut()}>登出</Link> : <Link href={""} onClick={()=>signIn()}>登录</Link>}
       <div
         className="w-5 h-4 cursor-pointer flex md:hidden  justify-between flex-col"
         onClick={() => setOpen(!open)}
@@ -26,7 +27,8 @@ const Navbar = () => {
           <Link href="/">首页</Link>
           <Link href="/">关于</Link>
           <Link href="/">项目</Link>
-          {status === "unauthenticated" ? <Link href={""} onClick={()=>signOut()}>登出</Link> : <Link href={""} onClick={()=>signIn()}>登录</Link>}
+          {/* <UserButton afterSignOutUrl="/" /> */}
+          {status === "authenticated" ? <Link href={""} onClick={()=>signOut()}>登出</Link> : <Link href={""} onClick={()=>signIn()}>登录</Link>}
         </div>
       )}
     </>

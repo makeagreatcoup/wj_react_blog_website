@@ -1,13 +1,13 @@
 "use client";
-import { data } from "autoprefixer";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-// import useSWR from "swr";
+import useSWR from "swr";
 
 const Comments = ({ postId }: { postId: string }) => {
-  const status = false;
+  const { status } = useSession();
+
   const [desc, setDesc] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const data = [
@@ -26,7 +26,7 @@ const Comments = ({ postId }: { postId: string }) => {
   return (
     <div className="mt-10">
       <h1 className="mb-8 softTextColor text-lg">当前评论</h1>
-      {status ? (
+      {status === "authenticated" ? (
         <div className="flex items-center justify-between gap-8">
           <textarea
             placeholder="请输入评论"
@@ -38,7 +38,7 @@ const Comments = ({ postId }: { postId: string }) => {
           </button>
         </div>
       ) : (
-        <Link href={""} onClick={()=>signIn()} className="px-4 py-2 w-max rounded-2xl border-2">请先登录</Link>
+        <Link href={""}  className="px-4 py-2 w-max rounded-2xl border-2">请先登录</Link>
       )}
       <div className="mt-10">
         {isLoading
